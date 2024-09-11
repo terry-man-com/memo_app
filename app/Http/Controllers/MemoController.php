@@ -16,6 +16,25 @@ class MemoController extends Controller
         return view('memos.index', ['memos' => $memos]);
     }
     
+    public function create()
+    {
+        return view('memos.create');
+    }
+
+    public function store(Request $request)
+    {
+        // インスタンスの生成
+        $memo = new Memo;
+
+        // 値の用意
+        $memo->title = $request->title;
+        $memo->body  = $request->body;
+
+        $memo->save();
+
+        // 登録後、indexに戻る処理
+        return redirect('/memos');
+    }
 
     // showページへ移動
     public function show($id) 
