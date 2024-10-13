@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\MemoController::class, 'index']);
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::resource('memos', App\Http\Controllers\MemoController::class);

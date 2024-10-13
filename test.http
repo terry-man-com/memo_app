@@ -1,0 +1,39 @@
+### index
+GET /api/memos HTTP/1.1
+Host: localhost
+Accept: application/json
+
+### store
+POST /api/memos
+Host: localhost
+Accept: application/json
+content-type: application/json
+
+{
+    "title": "HTML",
+    "body": "HTMLは、Hypertext Markup Languageの略です。"
+}
+
+
+### show
+GET /api/memos/1 HTTP/1.1
+Host: localhost
+Accept: application/json
+
+
+### update
+PUT /api/memos/1
+Host: localhost
+Accept: application/json
+content-type: application/json
+
+{
+    "title": "HTML",
+    "body": "HTMLは、Hypertext Markup Languageの略です。"
+}
+
+
+### destroy
+DELETE /api/memos/2 HTTP/1.1
+Host: localhost
+Accept: application/json
