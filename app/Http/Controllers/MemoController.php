@@ -6,8 +6,11 @@ namespace App\Http\Controllers;
 use App\Models\Memo;
 use App\Http\Requests\MemoRequest;
 
+
 class MemoController extends Controller
 {
+
+
     // indexページへ移動
     public function index() 
     {

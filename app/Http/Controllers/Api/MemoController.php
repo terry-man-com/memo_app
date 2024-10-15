@@ -77,6 +77,6 @@ class MemoController extends Controller
     public function destroy($id)
     {
         $memo = Memo::find($id);
-        $memo->deltete();
+        $memo->delete();
     }
 }
